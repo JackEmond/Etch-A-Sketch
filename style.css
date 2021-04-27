@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+
+#container {
+    width: 600px;
+    margin: 0 auto;
+    display: grid;
+    height: 600px;
+}
+
+.squareDiv{
+    border: #888888;
+    border-style: solid;
+}
