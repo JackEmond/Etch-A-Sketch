@@ -1,15 +1,32 @@
 h1{
     text-align: center;
+    color: white;;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
     width: 600px;
     margin: 0 auto;
     display: grid;
+    padding: 30px;
+    background-color: red;
+    background-image: linear-gradient(to right, #f40909 , #b32626);
     height: 600px;
+    box-shadow: 10px 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .squareDiv{
-    border: #888888;
+    border: #a3a3a3;
+    background-color: white;
     border-style: solid;
+}
+
+.red{
+    background-color: red;
+    background-image: linear-gradient(to right, #f40909 , #b32626);
+    width: 600px;
+    padding: 10px 30px;
+    margin: 50px auto 0px auto;
 }
