@@ -7,16 +7,33 @@
 
 </head>
 <body>
-  <div class="filters">
-    <p>Grid Size = 60 x 60</p>
-    <input id='slider' type="range" min="1" max="80" value="60">
+  <div id="box">
+    <div id="filters">
+      <p id="sliderText">Grid Size = 30 x 30</p>
+      <input id='slider' type="range" min="1" max="80" value="30">
+      
+      <p>Colour</p>
+      <button id="black" class="colourButtons active">Black</button>
+      <button id="red" class="colourButtons">Red</button>
+      <br>
+      <button id="blue" class="colourButtons">Blue</button>
+      <button id="randomColour" class="colourButtons"> randomColour</button>
+      <br>
+      <label for="colourPicker">Colour Picker:</label>
+      <div id="border"><input type="color" id="colourPicker" name="colourPicker"
+      value="#ff0000"></div>
+      <br>
+      <br>
+      <p>Reset</p>
+      <button id="reset" class="colourButtons">Reset</button>
 
-  </div>
-  <div class="etchasketch">
-    <div class="red"><h1>Etch-A-Sketch</h1></div>
-    <div id="container">
+
     </div>
-</div>
-  
+    <div class="etchasketch">
+      <div class="red"><h1>Etch-A-Sketch</h1></div>
+      <div id="container"></div>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
 </body>
