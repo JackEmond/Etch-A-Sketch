@@ -17,11 +17,12 @@ redButton.addEventListener('click', changeColour);
 const blueButton = document.querySelector("#blue");
 blueButton.addEventListener('click', changeColour);
 
+const randomColour = document.querySelector("#randomColour");
+randomColour.addEventListener('click', changeColour);
+
 const colourPicker = document.querySelector("#colourPicker");
 colourPicker.addEventListener('input', changeColourPicker);
 
-const randomColour = document.querySelector("#randomColour");
-randomColour.addEventListener('click', changeColour);
 
 document.querySelector("#reset").addEventListener('click', () => {location.reload()});
 
@@ -75,6 +76,9 @@ function addAbilitytoColour(){
       div.addEventListener('mouseover', () => {
         chooseColour(div);
     });
+    div.addEventListener('touchmove', () => {
+      chooseColour(div);
+  });
   });
 }
 

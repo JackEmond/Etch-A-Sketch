@@ -1,16 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: rgb(255, 1, 1);
+    }
+    #box {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 300px;
+        background-color: red;
+
+    }
+    #container{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #filters{
+        grid-row: 2;
+        grid-column: 1;;
+
+    }
+  }
+
 body{
     background-color: rgb(36, 35, 35);
 }
-h1{
-    text-align: center;
-    color: white;
-    font-family: 'Zen Dots', cursive;
-    margin: 0;
-    padding-bottom: 10px;
-}
-
 #box{
     height: 80vh;
 	position: absolute;
@@ -27,6 +41,7 @@ h1{
     background-image: linear-gradient(to right, #da0f0f , #b32626);
 }
 
+
 #filters{
     margin: 50px 0 0 0;
     background-color: rgb(240, 240, 240);
@@ -41,6 +56,7 @@ h1{
     font-family: 'Zen Dots', cursive;
 }
 
+
 #slider {
     cursor: pointer;
     -webkit-appearance: none;
@@ -52,48 +68,6 @@ h1{
     margin-bottom: 40px;
   }
 
-.colourButtons{
-    padding: 5px 10px;
-    margin: 10px;
-    border-radius: 6px;
-    border: none;
-    font-family: 'Zen Dots', cursive;
-    color: black;
-    background-color: white;
-    border-style: solid;
-}
-
-label{
-    font-family: 'Zen Dots', cursive;
-}
-#border{
-    background: red;
-    padding: 5px;
-    display: inline-block;
-}
-
-
-#black{
-    border-color: black;
-}
-
-#red{
-    border-color: red;
-}
-
-#blue{
-    border-color: blue;
-}
-#randomColour{
-    border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
-
-}
-
-.active{
-    box-shadow: 0 10px 10px rgba(7, 0, 12, 0.4);
-}
-
-  
 #slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -111,13 +85,57 @@ label{
     cursor: pointer;
 }
 
-#reset{
-    border-color: rgb(95, 94, 94);
+button{
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Zen Dots', cursive;
+    background-color: white;
+    border-style: solid;
+}
+.active{
+    box-shadow: 0 10px 10px rgba(7, 0, 12, 0.4);
+}
+
+#black{
+    border-color: black;
+}
+
+#red{
+    border-color: red;
+}
+
+#blue{
+    border-color: blue;
+}
+#randomColour{
+    border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
+
+}
+
+label{
+    font-family: 'Zen Dots', cursive;
+}
+
+#border{
+    background: red;
+    padding: 5px;
+    display: inline-block;
 }
 
 #reset:hover{
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    box-shadow: 0 5px 15px rgba(10, 1, 17, 0.4);
 }
+
+h1{
+    text-align: center;
+    color: white;
+    font-family: 'Zen Dots', cursive;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
 
 
 #container {
