@@ -8,25 +8,16 @@ const sliderText = document.querySelector("#sliderText");
 
 refreshStats();
 
-const blackButton = document.querySelector("#black");
-blackButton.addEventListener('click', changeColour);
-
-const redButton = document.querySelector("#red");
-redButton.addEventListener('click', changeColour);
-
-const blueButton = document.querySelector("#blue");
-blueButton.addEventListener('click', changeColour);
-
-const randomColour = document.querySelector("#randomColour");
-randomColour.addEventListener('click', changeColour);
+const colourButtons = document.querySelectorAll(".colourButtons");
+colourButtons.forEach((button) => {
+  button.addEventListener('click', changeColour);
+})
 
 const colourPicker = document.querySelector("#colourPicker");
 colourPicker.addEventListener('input', changeColourPicker);
 
 
 document.querySelector("#reset").addEventListener('click', () => {location.reload()});
-
-
 
 function changeColourPicker(event){
   const colourPickerBorder = document.querySelector("#border");
@@ -42,7 +33,7 @@ function changeColour(){
   addAbilitytoColour();
 }
 
-let activeButton = blackButton;
+let activeButton = document.querySelector('#black');
 
 function changeActiveButton(newActiveButton){
   activeButton.className = activeButton.className.replace(" active", "");
@@ -54,7 +45,6 @@ function numberOfRowsandColumns(){
   container.innerHTML = '';
   container.style.cssText = 'grid-template-columns: repeat(' + slider.value + ',auto); grid-template-rows: repeat('+ slider.value +', auto)';
 }
-
 
 function numberofSquareDivs(){
   numberofSquareDivsRequired = slider.value * slider.value;
@@ -69,16 +59,12 @@ function numberofSquareDivs(){
   }
 }
 
-
 function addAbilitytoColour(){
   const squareDivs = document.querySelectorAll('.squareDiv');
   squareDivs.forEach((div) => {
       div.addEventListener('mouseover', () => {
         chooseColour(div);
     });
-    div.addEventListener('touchmove', () => {
-      chooseColour(div);
-  });
   });
 }
 
@@ -92,7 +78,6 @@ function chooseColour(div){
     div.style.cssText = "background-color: "+ drawingColour +";";
   }
 }
-
 
 function sliderTextInformation(){
   sliderText.innerHTML = 'Grid Size = ' + slider.value + ' X ' + slider.value;
